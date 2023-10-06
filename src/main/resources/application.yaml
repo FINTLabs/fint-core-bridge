@@ -1,8 +1,8 @@
 fint:
   adapter:
     id: https://vigoiks.no/fintlabs-no/utdanning/vurdering
-    password:
-    username:
+    password: dummy
+    username: dummy
     #base-url: http://localhost:8081
     base-url: https://alpha.felleskomponent.no
     registration-id: fint
@@ -38,10 +38,14 @@ spring:
         registration:
           fint:
             authorization-grant-type: password
-            client-id:
-            client-secret:
+            client-id: dummy
+            client-secret: dummy
             provider: fint-idp
             scope: fint-adapter
 
 
-
+logging:
+  level:
+    org:
+      springframework: INFO
+        #scheduling: DEBUG

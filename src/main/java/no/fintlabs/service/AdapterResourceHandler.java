@@ -6,17 +6,19 @@ import no.fintlabs.adapter.models.AdapterCapability;
 import org.springframework.scheduling.annotation.Scheduled;
 
 @Slf4j
-public class ScheduleService {
+public class AdapterResourceHandler {
 
     private final AdapterCapability adapterCapability;
 
-    public ScheduleService(AdapterCapability adapterCapability) {
+    public AdapterResourceHandler(AdapterCapability adapterCapability) {
         this.adapterCapability = adapterCapability;
+        log.info("Service created for " + adapterCapability.getResourceName());
     }
 
-    @Scheduled(initialDelay = 1, fixedDelay = 5)
-    private void metode() {
+    @Scheduled(initialDelay = 1000, fixedDelay = 5000)
+    public void metode() {
         log.info("Ask for.. " + adapterCapability.getResourceName());
     }
 
+    // Todo: Call GET_ALL etc...
 }
