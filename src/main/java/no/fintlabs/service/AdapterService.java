@@ -1,10 +1,9 @@
 package no.fintlabs.service;
 
+import jakarta.annotation.PostConstruct;
 import no.fintlabs.config.AdapterConfig;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.PostConstruct;
 
 @Service
 public class AdapterService {
