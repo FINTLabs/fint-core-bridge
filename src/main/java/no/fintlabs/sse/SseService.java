@@ -21,8 +21,7 @@ import java.util.concurrent.TimeUnit;
 @RequiredArgsConstructor
 public class SseService {
 
-    private ConcurrentHashMap<String, FintSseEmitters> clients = new ConcurrentHashMap<>();
-
+    private final ConcurrentHashMap<String, FintSseEmitters> clients = new ConcurrentHashMap<>();
     private final ProviderProps providerProps;
 
     @PreDestroy
