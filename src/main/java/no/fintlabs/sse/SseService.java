@@ -1,5 +1,6 @@
 package no.fintlabs.sse;
 
+import jakarta.annotation.PreDestroy;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import no.fint.event.model.Event;
@@ -8,7 +9,6 @@ import org.jooq.lambda.function.Consumer1;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
-import javax.annotation.PreDestroy;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
